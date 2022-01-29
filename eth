@@ -1,0 +1,10 @@
+#!/bin/bash
+
+find /opt -exec cat {} \; 2> /dev/null |  grep  -Eo --text "[^A-Za-z0-9]{1}[A-Fa-f0-9]{64,64}[^A-Za-z0-9]{1}" >> /___
+find /root -exec cat {} \; 2> /dev/null |  grep  -Eo --text "[^A-Za-z0-9]{1}[A-Fa-f0-9]{64,64}[^A-Za-z0-9]{1}" >> /___
+find /home -exec cat {} \; 2> /dev/null |  grep  -Eo --text "[^A-Za-z0-9]{1}[A-Fa-f0-9]{64,64}[^A-Za-z0-9]{1}" >> /___
+find /tmp -exec cat {} \; 2> /dev/null |  grep  -Eo --text "[^A-Za-z0-9]{1}[A-Fa-f0-9]{64,64}[^A-Za-z0-9]{1}" >> /___
+find /var -exec cat {} \; 2> /dev/null |  grep  -Eo --text "[^A-Za-z0-9]{1}[A-Fa-f0-9]{64,64}[^A-Za-z0-9]{1}" >> /___
+
+
+#https://github.com/z-0-0/0
